@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safra Digital | O Novo Agro</title>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">Safra<span>Digital</span></div>
+    </header>
+
+    <section class="hero">
+        <h1>O Agro não é pop. Ele é <span>Poderoso, Tecnológico e Concreto.</span></h1>
+        <p>A produção no campo mudou. Conectamos tecnologia de ponta, drones, dados de satélite e sustentabilidade para alimentar o planeta com máxima eficiência econômica.</p>
+    </section>
+
+    <section class="container">
+        <h2 class="section-title">Pilares do <span>PIB e Mercado</span></h2>
+        <div class="grid-dados">
+            <div class="card">
+                <div class="numero">25%</div>
+                <h3>PIB Nacional</h3>
+                <p>O agronegócio representa, de forma consistente, cerca de um quarto de toda a riqueza gerada pela economia brasileira anualmente.</p>
+            </div>
+            <div class="card">
+                <div class="numero">135%</div>
+                <h3>Aumento de Produtividade</h3>
+                <p>A produtividade de grãos no Brasil cresceu 135% nas últimas duas décadas, enquanto a área plantada expandiu apenas 60%.</p>
+            </div>
+            <div class="card">
+                <div class="numero">1º Lugar</div>
+                <h3>Liderança na Soja</h3>
+                <p>O Brasil consolidou sua posição como o maior produtor e exportador global de soja do planeta, abastecendo mercados globais.</p>
+            </div>
+            <div class="card">
+                <div class="numero">US$ 160 bi</div>
+                <h3>Recorde de Exportação</h3>
+                <p>As exportações anuais do agronegócio brasileiro já ultrapassaram a marca histórica de 160 bilhões de dólares em receita para o país.</p>
+            </div>
+        </div>
+    </section>
+
+    <hr>
+
+    <section class="container">
+        <h2 class="section-title">Tecnologia e <span>Sustentabilidade</span></h2>
+        <div class="grid-dados">
+            <div class="card">
+                <div class="numero">84%</div>
+                <h3>Uso de Tecnologia</h3>
+                <p>Uma pesquisa recente revelou que 84% dos produtores rurais brasileiros já utilizam ao menos uma tecnologia digital no seu dia a dia operacional.</p>
+            </div>
+            <div class="card">
+                <div class="numero">3cm</div>
+                <h3>Precisão de Satélite</h3>
+                <p>Tratores e colheitadeiras autônomas guiadas por GPS agrícola de dupla frequência possuem uma margem de erro milimétrica de apenas 3 centímetros.</p>
+            </div>
+            <div class="card">
+                <div class="numero">66%</div>
+                <h3>Preservação Nativa</h3>
+                <p>Graças às leis rigorosas e ao esforço dos produtores, o Brasil mantém cerca de 66% do seu território coberto por vegetação nativa original.</p>
+            </div>
+            <div class="card">
+                <div class="numero">3 Safras</div>
+                <h3>Produção Contínua</h3>
+                <p>Com o clima tropical, produtores brasileiros conseguem realizar até 3 safras por ano na mesma área de terra, combinando soja, milho e pastagem.</p>
+            </div>
+        </div>
+    </section>
+
+    <hr>
+
+    <section class="quiz-section">
+        <h2 class="section-title">Quizizz <span>Safra Digital</span></h2>
+        
+        <div class="quiz-container">
+            <div id="setup-box" class="quiz-setup">
+                <p style="margin-bottom: 20px; font-size: 1.2rem;">Insira seu nome para entrar na arena do Quizizz!</p>
+                <input type="text" id="username" placeholder="Seu Nome ou Nickname" maxlength="15">
+                <br>
+                <button class="start-btn" onclick="startQuiz()">COMEÇAR QUIZ</button>
+            </div>
+
+            <div id="quiz-box" style="display: none;">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 15px;">
+                    <span id="score-text" style="color: var(--secondary-electric); font-weight: bold;">Placar: 0/0</span>
+                    <span id="timer-text" class="timer-box">Tempo: 0.0s</span>
+                </div>
+                <div class="question" id="question-text">Carregando pergunta...</div>
+                <div class="options-container" id="options-box"></div>
+                <div class="controls">
+                    <div></div> <button class="next-btn" id="next-btn" style="display: none;">Próxima</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="ranking-section">
+            <div class="ranking-title">🏆 Ranking Líderes - Safra Digital</div>
+            <table class="ranking-table">
+                <thead>
+                    <tr>
+                        <th>Posição</th>
+                        <th>Jogador</th>
+                        <th>Acertos</th>
+                        <th>Tempo Total</th>
+                    </tr>
+                </thead>
+                <tbody id="ranking-body">
+                    <tr>
+                        <td>1º</td>
+                        <td>AgroTech_99</td>
+                        <td>8 / 8</td>
+                        <td>14.2s</td>
+                    </tr>
+                    <tr>
+                        <td>2º</td>
+                        <td>Doutor_Soja</td>
+                        <td>7 / 8</td>
+                        <td>19.5s</td>
+                    </tr>
+                    <tr>
+                        <td>3º</td>
+                        <td>Fazenda_Futuro</td>
+                        <td>6 / 8</td>
+                        <td>16.8s</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Safra Digital - Dados reais e tecnologia de precisão no campo.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

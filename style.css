@@ -1,0 +1,274 @@
+/* 🎨 VARIÁVEIS DE CORES: Facilita mudar as cores do site em um só lugar */
+:root {
+    --bg-dark: #0B132B;           /* Azul Escuro Espacial (Fundo) */
+    --primary-neon: #39FF14;      /* Verde Limão Elétrico (Destaques principais) */
+    --secondary-electric: #00E5FF; /* Ciano Neon (Links e Títulos secundários) */
+    --accent-orange: #FF5722;     /* Laranja Vibrante (Alertas e Alvos) */
+    --text-light: #FFFFFF;        /* Texto Branco Principal */
+    --text-muted: #A0AEC0;        /* Texto Cinza para descrições secundárias */
+    --card-bg: #1C2541;           /* Cor de fundo das caixas/cards */
+}
+
+/* 📐 RESET GLOBAL: Remove margens padrões do navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+/* 🧭 NAVBAR / HEADER: Topo fixo com desfoque de vidro (backdrop-filter) */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background: rgba(11, 19, 43, 0.8);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 2px solid var(--primary-neon);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.logo span {
+    color: var(--primary-neon);
+}
+
+/* ✨ HERO SECTION: O grande banner inicial com brilho radial ao fundo */
+.hero {
+    padding: 80px 8% 40px;
+    text-align: center;
+    background: radial-gradient(circle at top, rgba(57, 255, 20, 0.15), transparent 60%);
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: var(--secondary-electric);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* 📦 ESTRUTURA DOS GRIDS: Organiza os blocos automaticamente em colunas */
+.container {
+    padding: 40px 8%;
+}
+
+.section-title {
+    font-size: 2.2rem;
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.section-title span {
+    color: var(--primary-neon);
+}
+
+/* Tracinho laranja decorativo embaixo dos títulos */
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: var(--accent-orange);
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+.grid-dados {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsivo automático */
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+/* 🃏 ESTILO DOS CARDS: Caixas com borda brilhante e efeito hover */
+.card {
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    padding: 25px;
+    border-left: 5px solid var(--primary-neon);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Dá o efeito de flutuar ao passar o mouse */
+    box-shadow: 0 10px 20px rgba(57, 255, 20, 0.15);
+}
+
+.card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+    color: var(--secondary-electric);
+}
+
+.card .numero {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--primary-neon);
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--secondary-electric), transparent);
+    margin: 30px 0;
+}
+
+/* 🎮 AREA DO QUIZ (Estilo Quizizz) */
+.quiz-section {
+    padding: 60px 8%;
+    background: radial-gradient(circle at bottom, rgba(255, 87, 34, 0.1), transparent 60%);
+}
+
+.quiz-container {
+    max-width: 700px;
+    margin: 0 auto;
+    background-color: var(--card-bg);
+    border-radius: 16px;
+    padding: 40px;
+    border: 2px solid var(--accent-orange);
+    box-shadow: 0 0 25px rgba(255, 87, 34, 0.2);
+}
+
+.quiz-setup input {
+    width: 80%;
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    border: 2px solid var(--secondary-electric);
+    background-color: var(--bg-dark);
+    color: white;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.quiz-setup input:focus {
+    outline: none;
+    border-color: var(--primary-neon);
+}
+
+.question {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.options-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Botões do Quiz */
+.option-btn {
+    background-color: #24305E;
+    color: var(--text-light);
+    border: 1px solid rgba(255,255,255,0.1);
+    padding: 15px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: left;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+}
+
+.option-btn:hover {
+    background-color: var(--accent-orange);
+    border-color: var(--accent-orange);
+}
+
+.timer-box {
+    font-size: 1.1rem;
+    color: var(--accent-orange);
+    font-weight: bold;
+}
+
+.start-btn, .next-btn {
+    background-color: var(--primary-neon);
+    color: var(--bg-dark);
+    border: none;
+    padding: 12px 25px;
+    font-weight: 700;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* 🔴🟢 FEEDBACK DE RESPOSTAS: Mudança de cor dinâmica controlada pelo JS */
+.correct { background-color: #1b4d22 !important; border-color: var(--primary-neon) !important; }
+.wrong { background-color: #611a15 !important; border-color: #ff3333 !important; }
+
+/* 🏆 ESTILOS DA TABELA DE LÍDERES */
+.ranking-section {
+    max-width: 700px;
+    margin: 40px auto 0;
+    background: #111a36;
+    border-radius: 12px;
+    padding: 25px;
+    border: 1px solid var(--secondary-electric);
+}
+
+.ranking-title {
+    text-align: center;
+    color: var(--secondary-electric);
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.ranking-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.ranking-table th, .ranking-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.ranking-table th {
+    color: var(--text-muted);
+}
+
+/* Destaca o primeiro colocado em verde limão */
+.ranking-table tr:first-child td {
+    color: var(--primary-neon);
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    padding: 40px;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    border-top: 1px solid #1C2541;
+}
